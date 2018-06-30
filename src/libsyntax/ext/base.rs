@@ -678,8 +678,8 @@ impl SyntaxExtension {
             SyntaxExtension::ProcMacro { .. } |
             SyntaxExtension::AttrProcMacro(..) |
             SyntaxExtension::ProcMacroDerive(..) |
-            SyntaxExtension::DeclMacro { is_transparent: false, .. } => Transparency::Opaque,
             SyntaxExtension::DeclMacro { is_transparent: true, .. } => Transparency::Transparent,
+            SyntaxExtension::DeclMacro { is_transparent: false, .. } => Transparency::Opaque,
             _ => Transparency::SemiTransparent,
         }
     }
